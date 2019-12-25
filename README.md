@@ -29,8 +29,7 @@ The collaborators for managing the contents for the respective course lessons ar
 | Lesson 20 | @Roza |
 | Lesson 21 | @Roza |
 | Lesson 22 | @Roza |
-| Lesson 23 |  |
-| Lesson 24 |  |
+| Lesson 23 | @Nina |
 
 Want to contribute? Great!
 If you wish to contribute on the contents on this course, do feel free to send us a PR for new contents and errata. Also if you wish to manage any of the lesson stated here, do feel free to contact the owner of this github repository.
