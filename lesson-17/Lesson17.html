@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 17</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 17 - Messaging and Containers</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+	</header> 
+	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>Notifications in the Cloud</h3> 
+			<p>	Sometimes users or applications need to be alerted when certain events happen. This might include events such as money transfer or when your mobile internet quota isexceeded This is where notifications play their part. Notification can be in many forms such as email and text
+			</p>
+			<p>	Simple Notification Service (SNS) is the product offered by Amazon for notification services. The advantages of SNS are: 
+			<ul> 
+				  <li>decouples notification logic from application</li> 
+				  <li>uses publisher/subscriber model, where subscribers can be person or application</li> 
+				  <li>allows notification to large number of subscribers</li> 
+				  <li>can publish to multiple outputs such as email, text, mobile push, SQS, webhooks or lambda functions</li> 
+			</ul>  
+			</p>
+		</section>
+		<section id="Content"> 
+			<h3>Messaging in the Cloud</h3>
+  			<p>	A queue is a data structure that holds requests called messages. These requests are a form of communication between two applications. Similar to waiting in line at a checkout counter, messages wait their turn to be processed. Messages in a queue are commonly processed in first in, first out (FIFO) order. Queue has the advantage of allowing for
+			asynchronous processing, which means the user or applicatino does not need to wait for messages to complete the task. This improves performance, scalability and user experience.
+			</p>
+			<p>	Simple Messaging Queue (SQS) is the Amazon product that integrate queuing functionality in an application. The advantages of SQS are: 
+			<ul> 
+				  <li>allows sending, storing and receiving of messages between applications without loss</li> 
+				  <li>introduces two types of queue services - standard and FIFO. Standard offers best-effort ordering, while FIFO guarantees processing in the order of which messages are received</li> 
+			</ul>  
+			</p>		
+		</section>
+		<section id="Content"> 
+			<h3>Containers in the Cloud</h3> 
+			<p>	A container consists of everything an application needs to run - the application and its dependencies. Each container is an independent component that can run on its own
+				Containers can be moved from environment to environment. With container, users do not have to build application every time it is moved from dev to prod. Docker is the leading container technology. </p><p>
+				To manage containers, we need orchestration services. Elastic Container Services (ECS) is the Amazon product that orchestrates Docker containers. ECS manage deployment, scaling and managing of containerized applications.
+			</p>
+		</section> 		 		
+	</div> 
+	
+</body> 
+</html>					 
