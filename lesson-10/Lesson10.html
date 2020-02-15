@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 10</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 10 - Working on Another Developer's Repository</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+	</header> 
+	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>Forking a Repository</h3> 
+			<p>	Forking in GIT means to make an identical copy of another repository. When we do that, the identical copy is belongs to us with full control to do as we please.
+				Forking is different from cloning, where cloning happens on the local machine whereas forking happens on a remote location. 
+				This means the cloned repo copy resides our local machine while the forked repo copy is available on a remote location.
+			</p>
+			<p>	There is no specific command such as git Fork to perform forking in GitHub. Rather forking is an action that's done on a hosting service, like GitHub.
+				Taking GitHub as an example, you need to login first before going to the intended original repository. Once in the repo, you need to find the action to fork. For instance there is a button to fork in every repository. After clicking the button, the forked copy would reside in your own account with a connection to the original project that it was copied from
+			</p>
+		</section>
+		<section id="Content"> 
+			<h3>Reviewing Existing Work</h3>
+  			<p>	When a team works on the same repository it is good to know what other developers are working on. This is so that we can work better within the same codebase. 
+				In order to do so, we use the git log command to find historical information on the changes that have occured. Among the commands we can use are:
+				<ul> 
+				  <li><i><b>git shortlog</b></i> - to see commits grouped by author. The flags that we can use along with this command are -s to show just the number of commits (rather than each commit's message) and -n to sort them numerically (rather than alphabetically by author name).</li> 
+				  <li><i><b>git log --author=nameofauthor</b></i>- to display all of the commits by a specific author. use quotes e.g. "Paul Lewis" if needed</li> 
+				  <li><i><b>git show 5966b66</b></i> - to display commits by a specific SHA </li> 
+				  <li><i><b>git log --grep="border radius issue in Safari"</b></i>- to display commits based on a text within the commit message. If you're trying to search for something that is multiple words and has spaces between the words, you need to wrap everything in quotes. 
+				</li> 
+				</ul>  
+			</p>       			
+		</section>
+		<section id="Content"> 
+			<h3>Determining What to Work On</h3> 
+			<p>	When teams works on repositories they are a few sources of information that they need to refer before contributing to the repo.
+			</p>
+			<p>	The first is the CONTRIBUTING.md File. The file name is typically written in all caps so that it's easily seen. As you could probably tell by its name, this file lists out the information you should follow to contribute to the project. These are things like coding convention, repo procedures etc. You should look for this file before you start doing development work of any kind.
+			</p>	
+			<p>	The second source of information is the Github Issues pages. This page would spell out any change that needs to be made to the project, from new codes to bugs. 
+				Each issue can have its own comments, so a conversation can form around the issue. All this are tracked with the Github issue tracker. This issue tracker allows each issue to :
+				<ul> 
+				  <li>have a label or multiple labels applied to it </li> 
+				  <li>be assigned to an individual</li> 
+				  <li>be assigned a milestone (for example the issue will be resolved by the next major release)</li> 
+				</li> 
+				</ul>  
+			</p>
+		</section> 		 		
+	</div> 
+	
+</body> 
+</html>					 
