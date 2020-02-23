@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 09</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 09 - Working with Remotes</div> 
+		<div class="head2">how to create remote repositories on GitHub and how to get and send changes to the remote repository</div> 
+	</header> 
+	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>Remote Repository</h3> 
+			<p>	Git is a distributed version control system which means there is not one main repository of information.Remote repositories are compared to local repositories.</p>
+				<p>We can collaborate with our friends like the project you see now.And Remote Repository make our code have a copy make sure more safety.</p>
+				<p>GitHub is one of popular remote repository provider.
+			</p>
+			
+		</section>
+		<br />
+		<section id="Content"> 
+			<h3>Add A Remote Repository</h3>
+			<p><li><i><b>git remote -v</b></i></li></p>
+			<p>use to check the remote repository on your local repository.</p>
+
+			<p><li><i><b>git remote add</b></i></li></p>
+			<p>use to add the remote repository on your local repository.</p>
+			<p>Example <i><b>git remote add origin https://github.com/richardkalehoff/RichardsFantasticProject.git</b></i></p>
+			<p>Also we can change <i><b>origin</b></i> to other words if you like.</p>
+
+			<br />
+
+			<h3>Push Changes To A Remote</h3>
+			<p><li><i><b>git log --oneline --graph --decorate --all</b></i></li></p>
+			<p>use to show the detail log of local repository.</p>
+			<p><li><i><b>git push 'remote-shortname' 'local-branch'</b></i></li></p>
+			<p>use to upload the specified local branch to remote repository like GitHub.</p>
+
+			<p>Example <i><b>git push origin master</b></i></p>
+
+			<br />
+
+			<h3>Pulling Changes From A Remote</h3>
+			<p><li><i><b>git pull origin master</b></i></li></p>
+			<p>use to donwload the specified local branch of remote repository like GitHub to local repository.</p>
+			<p>if local repo is behind of remote repo. pull will download and make both same.</p>
+			<p><li>the commit(s) on the remote branch are copied to the local repository</li>
+				<li>the local tracking branch (origin/master) is moved to point to the most recent commit</li>
+				<li>the local tracking branch (origin/master) is merged into the local branch (master)</li></p>
+			<p>If you don't want to automatically merge the local branch with the tracking branch then you wouldn't use <i><b>git pull</b></i> you would use a different command called <i><b>git fetch</b></i>.</p>
+
+			<br />
+			
+			<h3>Pull vs Fetch</h3>
+			<p><li><i><b>git fetch origin master</b></i></li></p>
+			<p><i><b>git fetch</b></i> as half of a g<i><b>it pull</b></i>.</p>
+			<p>Git fetch is used to retrieve commits from a remote repository's branch but it does not automatically merge the local branch.</p>
+			<p>In this case,we can avoid merge conflict in git pull</p>
+
+
+
+
+  					
+	</div> 
+	
+</body> 
+</html>					 
