@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 16</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 16 - Networking & Elasticity</div> 
+		<div class="head2">Learn the basics of networking , Route 53 ,EC2 AutoScaling ,Elastic Loard Balancing and elasticity in the cloud</div> 
+	</header> 
+	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>networking</h3> 
+			<p>What includes:</p>
+			<ul>
+				<li><i><b>network architecture</b></i></li>
+				<li><i><b>network connectivity</b></i></li>
+				<li><i><b>application delivery</b></i></li>
+				<li><i><b>global performance</b></i></li>
+				<li><i><b>delivery</b></i></li>
+			</ul>
+			<p>	The network is the foundation of your infrastructure, compared to local repositories.</p>
+			<p>Tips:</p>
+			<ul>
+				<li>DNS - domain name system</li>
+				<li>IP - Internet protocol Address</li>
+				
+			</ul>
+
+			
+			
+		</section>
+		<br />
+		<section id="Content"> 
+			<h3>Route 53</h3>
+			
+			<p>a cloud domain name system (DNS) service.</p>
+			<p>Route 53 provided :</p>
+			<ul>
+				<li><i><b>domain name registration</b></i></li>
+				<li><i><b>Internet routing</b></i></li>
+				<li><i><b>health checking for resource</b></i></li>
+				<li><i><b>scales automatically to manage spikes in DNS queries</b></i></li>
+				<li><i><b>offer DNS fail-over to automatically route web visitors to alternate to avoid outage</b></i></li>
+				
+			</ul>
+
+			
+
+			<br />
+
+			<h3>Elasticity in the cloud</h3>
+			<p><li><i><b>Only pay what you need,optimizing cost savings</b></i></li></p>
+			<p>Automatically scale up or scale down based on load,allows you to stop guessing about capacity when you need to run your applications</p>
+			<p><li><i><b>Scale up </b></i></li></p>
+			<p>Vertical scaling by resizing an instance to add more capacity.</p>
+			<p><li><i><b>Scale out </b></i></li></p>
+			<p>Horizontal scaling by increasing the number of servers in the farm.</p>
+
+			
+
+			<br />
+
+			<h3>EC2 Auto Scaling</h3>
+			
+			<p>a service that monitors your EC2 instances and automatically adjusts by adding or removing EC2 instances based on conditions you define.</p>
+			<ul>
+				<li><i><b>Automatically scale in and out based on needs.</b></i></li>
+				<li><i><b>Included automatically with Amazon EC2.</b></i></li>
+				<li><i><b>Automate how your Amazon EC2 instances are managed.</b></i></li>
+				
+				
+			</ul>
+			
+			
+			<br />
+			
+			<h3>Elastic Load Balancing</h3>
+			<p>Automatically distributes incoming application traffic across multiple servers.</p>
+			<ul>
+				<li><i><b>Balances load between two or more servers.</b></i></li>
+				<li><i><b>Stands in front of a web server.</b></i></li>
+				<li><i><b>Provides redundancy and performance.</b></i></li>
+				
+				
+			</ul>
+			<p>Tips:</p>
+			<ul>
+				<li>
+				<p><i><b>Redundancy：</i></b></p>
+				<p>If you lose a server, the load balancer will send requests to other working servers. This feature maintains continuous operations in an emergency.</p>
+				</li>
+				<li>
+				<p><i><b>Performance: </i></b></p>
+				<p>If a server starts having issues or bottlenecks, the load balancer will add more servers to the pool of available servers. Auto scaling automatically adjusts capacity to maintain a steady state.</p>
+				</li>
+				
+			</ul>
+
+
+
+
+  					
+	</div> 
+	
+</body> 
+</html>					 
