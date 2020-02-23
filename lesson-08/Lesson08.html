@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <title>Lesson 8 </title> 
+        <style> 
+            .head1 { 
+                font-size:40px; 
+                color:#009900; 
+                font-weight:bold; 
+            } 
+            .head2 { 
+                font-size:17px; 
+                margin-left:10px; 
+                margin-bottom:15px; 
+            } 
+            body { 
+                margin: 0 auto; 
+                background-position:center; 
+                background-size: contain; 
+            } 
+        
+            .body_sec { 
+                margin-left:20px; 
+            } 
+        </style> 
+    </head> 
+<body>
+    <!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 8 -: Undoing Changes</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+	</header> 
+
+    <!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+            <h3>Modifying The Last Commit</h3>
+                <ul style="list-style-type:square;">
+                    <li>Git commit –-amend : will actually modify you last commit, can be the files or even the commit messages.It lets you combine staged changes with the previous commit instead of creating an entirely new commit. It can also be used to simply edit the previous commit message without changing its snapshot. But, amending does not just alter the most recent commit, it replaces it entirely, meaning the amended commit will be a new entity with its own ref. To Git, it will look like a brand new commit, which is visualized with an asterisk (*) in the diagram below.</li>
+                    <li>git commit --amend -m "an updated commit message" : Adding the -m option allows you to pass in a new message from the command line without being prompted to open an editor.</li>
+                    <li>git commit --amend --no-edit : The --no-edit flag will allow you to make the amendment to your commit without changing its commit message. </li>
+                </ul>
+        </section>
+        <section id="Content"> 
+            <h3>Reverting the Commit</h3>
+                <ul style="list-style-type:square;">
+                    <li>Git revert command : basically it will reverse a previously made commit</li>
+                    <ul>
+                        <li>git revert &lt SHA-of-commit-to-revert &gt</li>
+                    </ul>
+                </ul>
+        </section>
+        <section id="Content"> 
+            <h3>Git Reset</h3>
+                <ul style="list-style-type:square;">
+                    <li>Git reset : Resetting means it erases commits from current branch, which is dangerous. while revert-ing creates a new commit that reverts or undos a previous commit.
+                        We cant recover the old commit unless you made a backup of the commit before reset .</li>
+                        <ul>
+                            <li>Reset command : git reset</li>
+                            <li>Backup : git branch back up</li>
+                        </ul>
+                   <li>There are three different way of resetting git : </li>
+                        <ul>
+                            <li>–soft : Does not touch the index file or the working tree at all (but resets the head to &lt commit &gt, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.</li>
+                            <li>–mixed : Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+                               If -N is specified, removed paths are marked as intent-to-add.
+                               </li> 
+                           <li>–hard : Resets the index and working tree. Any changes to tracked files in the working tree since &lt commit &gt are discarded.</li>
+                        </ul>
+                </ul>
+        </section>
+    </div>
+
+    <footer>
+        Made with &hearts; by Mohesh @ Udacity
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
