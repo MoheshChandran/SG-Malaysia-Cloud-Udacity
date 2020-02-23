@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <title>Lesson 6 </title> 
+        <style> 
+            .head1 { 
+                font-size:40px; 
+                color:#009900; 
+                font-weight:bold; 
+            } 
+            .head2 { 
+                font-size:17px; 
+                margin-left:10px; 
+                margin-bottom:15px; 
+            } 
+            body { 
+                margin: 0 auto; 
+                background-position:center; 
+                background-size: contain; 
+            } 
+        
+            .body_sec { 
+                margin-left:20px; 
+            } 
+        </style> 
+    </head> 
+<body>
+    <!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 6 - : Add Commits To Repo</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+	</header> 
+
+    <!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+            <h3>Git add</h3>
+                <ul style="list-style-type:square;">
+                    <li>git add : command is used to move files from the Working Directory to the Staging Index</li>
+                        <ul>
+                            <li>git add “.” : this command is use to add all the file from working directory to staging index</li>
+                            <li>git add “file name”: is use to add specific file</li>
+                            <li>git add <file1> <file2> <file3>  , add few file to staging directory by a space</li>
+                        </ul>
+                </ul>
+        </section>
+        <section id="Content"> 
+            <h3>Git commit</h3>
+                <ul style="list-style-type:square;">
+                    <li>git commit : is used to move the changes file from staging index to repository</li>
+                    <ul>
+                        <li>The content to be committed can be specified in several ways:</li>
+                        <ul>
+                             <li>by using git-add to incrementally "add" changes to the index before using the commit command (Note: even modified files must be "added")</li>
+                             <li>by using git-rm to remove files from the working tree and the index, again before using the commit command</li>
+                             <li>by listing files as arguments to the commit command (without --interactive or --patch switch), in which case the commit will ignore changes staged in the index, and instead record the current content of the listed files (which must already be known to Git)</li>
+                             <li>by using the -a switch with the commit command to automatically "add" changes from all known files (i.e. all files that are already listed in the index) and to automatically "rm" files in the index that have been removed from the working tree, and then perform the actual commit</li>
+                             <li>by using the --interactive or --patch switches with the commit command to decide one by one which files or hunks should be part of the commit in addition to contents in the index, before finalizing the operation.</li>
+                         </ul>
+                    </ul>
+                </ul>
+        </section>
+        <section id="Content"> 
+            <h3>Git Diff</h3>
+                <ul style="list-style-type:square;">
+                    <li>git diff : Show changes between the working tree and the index or a tree, changes between the index and a tree, changes between two trees, changes between two blob objects, or changes between two files on disk.</li>
+                        <ul>
+                            <li>git diff [&ltoptions&gt] [--] [&ltpath&gt…​] : This form is to view the changes you made relative to the index (staging area for the next commit).</li>                            
+                        </ul>
+                </ul>
+        </section>
+    </div>
+
+    <footer>
+        Made with &hearts; by Mohesh @ Udacity
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
