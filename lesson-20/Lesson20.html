@@ -76,17 +76,86 @@
 				</ol>
 				</p>
 			<h3>Public vs Private Subntes</h3>
+				<p><strong>Subnets</strong>
+					<ul>
+						<li>A subnet is a subset of the overall VPC network and it only exists in a single availability zone, unlike its parent network, the VPC.</li>
+						<li>A subnet contains resources, and can be assigned access rights that apply to all resources within that subnet.</li>
+						<li>Subnets can be public or private. Public subnets are accessible to external users. Private subnets are only accessed internally by other resources within your cloud container.</li>
+					</ul>
+				<strong>Use IP addresses for routing traffic</strong>
+					<ul>
+						<li>Use IP addresses as the “keys” for routing traffic. We can route traffic to stay within the VPC, or within a particular subnet, for security reasons.</li>
+						<li>For example, a database or any sensitive data will be placed in a private subnet. A public server, like a web server, can be placed in a public subnet. Routing rules applied to a subnet allow us to define access to all resources placed inside that subnet.</li>
+					</ul>
+				</p>
 			<h3>IGW Internet Gateway</h3>
+				<p><strong>Software Defined Networking</strong> is using APIs and already-existing physical infrastructure to create our own networking layer on top, with our own privacy rules, our own routing and our own Private IP Space.<br/>
+				<strong>VPN / Virtual Private Network</strong>is a type of encrypted connectivity that You can setup between your on-premise data center and your Virtual Private Cloud. This allows access in and out of your AWS VPC in a secure manner, across the internet and using internal, Private IP addresses.</br>
+				<br/><strong>DirectConnect</strong>is a physical data line that you can purchase directly from AWS or through a telecommunication service provider to access your AWS Cloud without moving your data traffic across the public internet.<br/>
+				<strong>Internet Gateway</strong>
+				<ul>
+					<li>An internet gateway is a resource that enables inbound and outbound traffic from the internet to your VPC.</li>
+					<li>An internet gateway allows external users access to communicate with parts of your VPC.</li>
+					<li>If you create a private VPC for an application that is internal to your company, you will not need an internet gateway.</li>
+				</ul>
+				</p>
 			<h3>Network Address Translation</h3>
+				<p>It provides outbound-only internet gateway for private services to access the internet. <br/>
+					This keeps the private service protected from inbound connections, but allows it to connect to the internet in order to perform functions such as downloading software updates. The NAT gateway serves as an intermediary to take a private resource’s request, connect to the internet, and then relay the response back to the private resource without exposing that private resource’s IP address to the public.</p>
 			<h3>Autoscaling groups</h3>
-      		<h3>Load balancers</h3>
+				<p>It is a coherent group of Virtual Machines (EC2 instances) that allows running the exact number of VMs that are required to meet the demand/specification. The autoscaling group can automatically start or stop the servers (EC2 instances) according to the amount of incoming traffic.
+				<br/> This behavior of the autoscaling group helps in two ways:<br/>
+				<ul>
+					<li>The consumer pays for the only duration of the servers when they were active.</li>
+					<li>The consumer doesn't have to worry about horizontal scaling of servers for a sudden peak in incoming traffic.</li>
+				</ul>
+				<strong>Best Practice</strong>
+				<ul>
+					<li>It is recommended that an autoscaling group spans more than one availability zone, for reliability.</li>
+					<li>f we set the autoscaling group to run one resource, it will run that one resource in one of the availability zones.</li>
+					<li>If there is a failure of that resource, the autoscaling group will shut it down in that availability zone and start that same resource in the other availability zone.</li>
+				</ul>
+				<img src="elasticity.PNG" alt="Elasticity in Cloud Computing">
+				</p>
+			<h3>Load balancers</h3>
+			  <p>
+				<ul>
+					<li>A service designed to distribute work requests meant for a target group</li>
+					<li>A Target Group is a collection of servers providing a common service.</li>
+					<li>As requests come in, the Load Balancer will spread the requests evenly across its target group.</li>
+					<li>Good practice - Assume we have a set of web-servers in private subnet(s). Then, we must have a Load Balancer that would access our web-servers. These web-servers, in turn, would access the backend database.</li>
+				</ul>
+				<img src="elastic_load_balancer.PNG" alt="Elastic Load Balancer">
+			  </p>
 			<h3>Security Groups</h3>
+			  <p>
+				<ul>
+					<li>Security groups manage traffic at the server level (the resource level). Security Groups aren’t for managing higher-level groups such as subnets, VPC, or user accounts.</li>
+					<li>The same security group can be assigned to multiple resources that require the same security access settings defined by that security group.</li>
+					<li>A Security Group is a collection of networking rules for inbound and outbound traffic.</li>
+				</ul>
+			  </p>
 			<h3>Routing Table</h3>
+			  <p>
+				<ul>
+					<li>A Set of entries or rules associated with one or more of your subnets inside your VPC</li>
+					<li>These rules allow or deny traffic to/from the address ranges that you specify.</li>
+					<li>Rules can be as open as the entire world or restricted to a single IP address.</li>
+				</ul>
+				<img src="routing_table.PNG" alt="Routing Table">
+			  </p>
 			<h3>S3</h3>
+			 <p>
+				<ul>
+					<li>An S3 bucket is a public service for users to upload or download files</li>
+					<li>Place the S3 service outside of your VPC.</li>
+				</ul> 
+			 </p>
 
 	</div>
 
-	<div class="footer">Written by: Fairoza Amira Binti Hamzah, @Roza</div>
+	<div class="footer">All the images and notes here are from Udacity Introduction to Cloud Computing, Bertelsmann Cloud Track.<br/>
+		Written by: Fairoza Amira Binti Hamzah, @Roza</div>
 
 </body>
 </html>
