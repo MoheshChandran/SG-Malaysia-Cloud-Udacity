@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 4</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+
+        .code{            
+            padding: 10px;            
+            margin-bottom:20px;
+            margin-top:20px;      
+			margin-left:20px;       
+            margin-right:50px;       
+            line-height: 1.5;  
+            background-color: #d3d3d3 ;          
+        }
+
+        .comment {
+            color:green;
+        }
+
+        .div-item {
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 4 - Create a Git repo</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+    </header> 
+   	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+            <h3>git init</h3>
+			<p>create a new empty git repository. Create a hidden .git directory that records all of the commits. </p>
+            <div class="code">
+                mkdir new-git-project	<span class="comment"># create new directory</span><br>
+                cd new-git-project		<span class="comment"># change directory</span><br>
+                git init				<span class="comment"># initialize git repo  </span>                  
+            </div>
+            <p>
+                Here is the list of files/directories inside .git directory. Recommended not to change/edit these files            
+                <ul>
+                    <li>
+                        <b>config file</b>
+                        <div class="div-item">project specific configuration settings. These values are specific to that single repository.</div>
+                    </li>
+                    <li>
+                        <b>description file</b>
+                        <div class="div-item">this file is only used by the GitWeb program (can be ignored)</div>
+                    </li>
+                    <li>
+                        <b>hooks directory</b>
+                        <div class="div-item">client-side or server-side scripts that used to hook into Git's different lifecycle events</div>
+                    </li>
+                    <li>
+                        <b>info directory</b>
+                        <div class="div-item">contains the global excludes file</div>
+                    </li>
+                    <li>
+                        <b>objects directory</b>
+                        <div class="div-item">directory that store all of the commits</div>
+                    </li>
+                    <li>
+                        <b>refs directory</b>
+                        <div class="div-item">directory that holds pointers to commits (basically the "branches" and "tags")</div>
+                    </li>
+                </ul>
+            </p>
+    
+            <h3>git clone</h3>
+			<p>create an identical copy of an existing remote repository into a new directory, same name with the repo</p>
+            <div class="code">
+                    git clone https://github.com/udacity/course-git-blog-project <span class="comment"># create a clone inside directory course-git-blog-project</span><br>
+                    git clone https://github.com/udacity/course-git-blog-project blog-project <span class="comment"># create a clone inside directory blog-project</span><br>                 
+            </div>
+
+            <h3>git status</h3>
+			<p>display the current status of the repository
+                display the current status of the repository
+                <ul>
+                    <li>
+                        new files that have been created in the Working Directory that Git hasn't started tracking, yet                    </li>
+                    <li>
+                        files that Git is tracking that have been modified                  
+                    </li>
+                </ul>
+            </p>            
+	
+		</section>		 		
+	</div> 
+	
+</body> 
+</html>	
