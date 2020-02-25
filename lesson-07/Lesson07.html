@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <title>Lesson 7 </title> 
+        <style> 
+            .head1 { 
+                font-size:40px; 
+                color:#009900; 
+                font-weight:bold; 
+            } 
+            .head2 { 
+                font-size:17px; 
+                margin-left:10px; 
+                margin-bottom:15px; 
+            } 
+            body { 
+                margin: 0 auto; 
+                background-position:center; 
+                background-size: contain; 
+            } 
+        
+            .body_sec { 
+                margin-left:20px; 
+            } 
+        </style> 
+    </head> 
+<body>
+    <!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 7 -: Tagging, Branching, & Merging</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+	</header> 
+
+    <!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+            <h3>Git Tag</h3>
+                <ul style="list-style-type:square;">
+                    <li>git tag – Listing all the existing tag in your repository (with optional -l or --list), 2.	also can list all the tag with matching pattern </li>
+                    <img src="gitTag.PNG" alt="git tag" >
+                    <li>Creating tags. There is two types of tags : lightweight and annotated</li>
+                    <ul>
+                        <li>git tag “tag name” : this is lightweight tag</li>
+                        <li>git tag -a “tag name” -m "tag message" : this is annotated tag, where need to supply -a, -s or -m options</li>
+                        <li>You can also tag on past commits by using this command : git tag -a “tag name” “commit sha id”</li>
+                    </ul>
+                    <li>git tag : used to display all of the tag that are in the repository</li>
+                    <li>git tag -d “tag name” – this command is use to delete the specific tag from the repository</li>
+                </ul>
+        </section>
+        <section id="Content"> 
+            <h3>Git Branch</h3>
+                <ul style="list-style-type:square;">
+                    <li>git branch : is use to list all the branch names in the repository</li>
+                    <li>git branch “branch name” : this command is used to create a branch</li>
+                    <li>git checkout “branch name” : this command is used to switch branch , So this will remove all of the files that are referenced by commits in the current branch.
+                         It will replace them with the files that are referenced by the commits in the reference branch.</li>
+                    <li>git branch -d “branch name” : is used to delete branch from the repo</li>    
+                </ul>
+        </section>
+        <section id="Content"> 
+            <h3>Git Merge</h3>
+                <ul style="list-style-type:square;">
+                    <li>git merge : The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch. Git merge will combine multiple sequences of com-mits into one unified history.</li>
+                    <ul>
+                        <li>$ git merge &lt name-of-branch-to-merge-in &gt</li>
+                    </ul>
+                </ul>
+        </section>
+    </div>
+
+    <footer>
+        Made with &hearts; by Mohesh @ Udacity
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

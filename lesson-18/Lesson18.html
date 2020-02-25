@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 18</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 18 - AWS Management</div> 
+		<div class="head2">Learn logging, auditing, and resource management(Cloud Trail / Cloud Watch / Cloud Formation / AWS CLI ) in the cloud</div> 
+	</header> 
+	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>logging and auditing in the cloud</h3> 
+			<p> logging and auditing services to help you proactively monitor your resources and applications</p>
+			<p>What includes:</p>
+			<ul>
+				<li><i><b>How is this server performing?</b></i></li>
+				<li><i><b>What is the current load on the server?</b></i></li>
+				<li><i><b>What is the root cause of an application error that a user is seeing?</b></i></li>
+				<li><i><b>What is the path that leads to this error?</b></i></li>
+				
+			</ul>
+			
+
+			
+			
+		</section>
+		<br />
+		<section id="Content"> 
+			<h3>Cloud Trail </h3>
+			
+			<p>allows you to audit (or review) everything that occurs in your AWS account. Cloud Trail does this by recording all the AWS API calls occurring in your account and delivering a log file to you.</p>
+			<p>CloudTrail provides:</p>
+			<ul>
+				<li><i><b>who has logged in</b></i></li>
+				<li><i><b>services that were accessed</b></i></li>
+				<li><i><b>actions performed</b></i></li>
+				<li><i><b>parameters for the actions</b></i></li>
+				<li><i><b>responses returned</b></i></li>
+				
+			</ul>
+			<p>Tips:</p>
+			<ul>
+				<li>CloudTrail shows results for the last 90 days.</li>
+				<li>You can create up to five trails in an AWS region.(more than 1 will be charged)</li>
+			</ul>
+
+
+			
+
+			<br />
+
+			<h3>Cloud Watch</h3>
+			<p>a service that monitors resources and applications that run on AWS by collecting data in the form of logs, metrics,and events.</p>
+			<p>Cloud Watch features:</p>
+			<ul>
+				<li><i><b>Collect and track metrics</b></i></li>
+				<li><i><b>Collect and monitor log files</b></i></li>
+				<li><i><b>Set alarms and create triggers to run your AWS resources</b></i></li>
+				<li><i><b>React to changes in your AWS resources</b></i></li>
+				
+				
+			</ul>
+
+
+			<br />
+
+			<h3>Infrastructure as Code</h3>
+			
+			<p>allows you to describe and provision all the infrastructure resources in your cloud environment. You can stand up servers, databases, runtime parameters, resources, etc. based on scripts that you write.</p>
+			<p> Infrastructure as Code is a time-saving feature because it allows you to provision (or stand up) resources in a reproducible way.</p>
+			
+			
+			
+			<br />
+			
+			<h3>Cloud Formation</h3>
+			<p>AWS Cloud Formation allows you to model your entire infrastructure in a text file template allowing you to provision AWS resources based on the scripts you write.</p>
+			<p>Tips:</p>
+			<ul>
+				<li>Cloud Formation templates are written using JSON or YAML.</li>
+				<li>You can still individually manage AWS resources that are part of a Cloud Formation stack</li>
+
+			</ul>
+				
+			<br />
+			
+			<h3>AWS CLI</h3>
+			<p>AWS CLI(or Command Line Interface) allows you to access and control services running in your AWS account from the command line. To use the CLI, simply download, install, and configure it.</p>
+			<p>Tips:</p>
+			<ul>
+				<li>
+					<p><i><b> aws ec2 describe-instance</b></i></p>
+					<p>list all of the instance running in account</p>
+				</li>
+				<li><p><i><b> aws sqs receive-message --queue-url https://sqs.us-east-q.amazonaws.com/xxxx/payment-request-q.fifo</b></i></p>
+					<p>list th message in a queue</p>
+				</li>
+				<li><p><i><b> aws s3 ls s3://codevr(bucket name)</b></i></p>
+					<p>list the contents of an S3 bucket via the CLI</p>
+				</li>
+				<li><a target="_blank" href="https://amazonaws-china.com/cn/cli/" >AWS Command Line Interfac</a></li>	
+				
+			
+
+
+
+
+  					
+	</div> 
+	
+</body> 
+</html>					 
