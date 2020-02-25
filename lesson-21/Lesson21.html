@@ -66,15 +66,37 @@
 			<p> 
 				<img src="cloudformation.PNG" alt="cloud formation scripts">
 				<img src="cloudformation2.PNG" alt="cloud formation scripts 2">
+				<img src="cloudformation3.PNG" alt="cloud formation scripts 3">
+				<strong> Calling CloudFormation</strong>
+				<div class = "code">
+					aws cloudformation create-stack --stack-name MyStack --template-body file://MyCloudformationScript.yml  --parameters file://MyEnvironmentVariables.json 
+				</div>
+			</p>
+			<h3>NAT Gateway and Subnets</h3>
+				<p>Refer to <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html">this AWS documentation</a> to create subnet, and 
+				<a href="https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating">this link</a> to create a NAT Gateway.
+
 			</p>
 		</section>
 		<section id="Content">
 			<h3>Routing</h3>
-
+				<p>Routing is the action of applying routing rules to your network, in this case, to your VPC.
+				<br/><italic>Routing rule:</italic> Resources follow the routing rule, which defines what resource has access to communicate with another resource. It blocks traffic from resources that do not follow the routing rule.</p>
+				<p>Refer to this<a href="https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html"> this user guide</a> to create Route Tables.</p>
 		</section>
 		<section id="Content">
 			<h3>Outputs</h3>
-
+			 <p>
+				 The <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">output documentation</a> can be referred here.<br/>
+				 Outputs are optional but are very useful if there are output values you need to:
+				<ul>
+					<li> import into another stack</li>
+					<li> return in response</li>
+					<li> view in AWS console</li>
+				</ul>
+				<br/>
+				 <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html">Join Function </a>can be used to combine a group of values. The syntax requires you provide a <italic>delimiter</italic> and a list of values you want appended.
+			 </p>
 		</section>
 
 
