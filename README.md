@@ -8,23 +8,23 @@ The collaborators for managing the contents for the respective course lessons ar
 
 | Lesson | Contributor |
 | ------ | ------ |
-| Lesson 2 | @Lesliel |
-| Lesson 3 | @Lesliel |
-| Lesson 4 | @Lesliel |
-| Lesson 5 | @Yujin |
-| Lesson 6 | @Mohesh Chandran |
-| Lesson 7 | @Mohesh Chandran |
-| Lesson 8 | @Mohesh Chandran |
-| Lesson 9 | @Burt Ceng |
-| Lesson 10 | @Amir Shah |
-| Lesson 11 | @Yujin  |
-| Lesson 12 | @Yujin |
+| Lesson 2 | @Lesliel | Done |
+| Lesson 3 | @Lesliel | Done |
+| Lesson 4 | @Lesliel | Done |
+| Lesson 5 | @Yujin | Done |
+| Lesson 6 | @Mohesh Chandran | Done |
+| Lesson 7 | @Mohesh Chandran | Done |
+| Lesson 8 | @Mohesh Chandran | Done |
+| Lesson 9 | @Burt Ceng | Done |
+| Lesson 10 | @Amir Shah | Done |
+| Lesson 11 | @Yujin  | Done |
+| Lesson 12 | @Yujin | Done |
 | Lesson 13 | @Alex Soh |
 | Lesson 14 | @Alex Soh |
 | Lesson 15 | @Alex Soh |
-| Lesson 16 | @Burt Ceng |
-| Lesson 17 | @Amir Shah |
-| Lesson 18 | @Burt Ceng |
+| Lesson 16 | @Burt Ceng | Done |
+| Lesson 17 | @Amir Shah | Done |
+| Lesson 18 | @Burt Ceng | Done |
 | Lesson 19 | @Amir Shah |
 | Lesson 20 | @Roza |
 | Lesson 21 | @Roza |
