@@ -6,8 +6,8 @@ This repository contains study notes for the Udacity Cloud Track Nanodegree Prog
 
 The collaborators for managing the contents for the respective course lessons are as follows:
 
-| Lesson | Contributor |
-| ------ | ------ |
+| Lesson | Contributor | Done? |
+| ------ | ------ | ------ |
 | Lesson 2 | @Lesliel | Done |
 | Lesson 3 | @Lesliel | Done |
 | Lesson 4 | @Lesliel | Done |
