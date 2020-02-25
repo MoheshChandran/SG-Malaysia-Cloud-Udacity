@@ -26,7 +26,7 @@ The collaborators for managing the contents for the respective course lessons ar
 | Lesson 17 | @Amir Shah | Done |
 | Lesson 18 | @Burt Ceng | Done |
 | Lesson 19 | @Amir Shah |
-| Lesson 20 | @Roza |
+| Lesson 20 | @Roza | Done |
 | Lesson 21 | @Roza |
 | Lesson 22 | @zhenli |
 | Lesson 23 | @Nina |
