@@ -22,6 +22,20 @@
 		.body_sec {
 			margin-left:20px;
 		}
+
+		.code{            
+            padding: 10px;            
+            margin-bottom:20px;
+            margin-top:20px;      
+            margin-right:50px;       
+            line-height: 1.5;  
+            background-color: #d3d3d3 ;          
+        }
+
+		.comment {
+            color:green;
+        }
+
 	</style>
 </head>
 
@@ -37,11 +51,22 @@
 	<div class = "body_sec">
 		<section id="Content">
 			<h3>Workflow and Helpers</h3>
-
+			<p> 
+				You may download the <a href="https://github.com/udacity/nd9991-c2-Infrastructure-as-Code-v1/blob/master/supporting_material/network.yml">network's yaml file</a> here for a reference.<br/>
+				Although descriptions are optional , Resource fields are required. Remember to include at least one resource (e.g., a VPC, an EC2 instance, a database) in the CloudFormation .yml script, otherwise it will give an error when you try to run the script.<br/>
+				<div class="code">
+					Resources:<br/>
+    				VPC:<br/>
+        			TYPE: AWS::EC2::VPC
+				</div>
+			</p>
 		</section>
 		<section id="Content">
 			<h3>VPC and Internet Gateway</h3>
-
+			<p> 
+				<img src="cloudformation.PNG" alt="cloud formation scripts">
+				<img src="cloudformation2.PNG" alt="cloud formation scripts 2">
+			</p>
 		</section>
 		<section id="Content">
 			<h3>Routing</h3>
