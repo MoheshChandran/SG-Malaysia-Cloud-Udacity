@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 3</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+
+        .code{            
+            padding: 10px;     
+			margin-left:20px;
+            margin-bottom:20px;
+            margin-top:20px;      
+            margin-right:50px;       
+            line-height: 1.5;  
+            background-color: #d3d3d3 ;          
+        }
+
+        .comment {
+            color:green;
+        }
+
+        .div-item {
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 3 - Version Control</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+    </header> 
+   	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>What is Version Control</h3> 
+            <p>Software that helps you control (or manage) the different versions...of something (typically source code). Also known as revision control or source control</p>
+            <p>There are 2 main types of version control system models:
+                <ul>
+                    <li><b>centralized model</b> - All users connect to a central, master repository. Eg. CVS, Subversion (or SVN) and Perforce</li> 
+                    <li><b>distributed model</b> - Each user has the entire repository on their computer Eg. Git, Mercurial, and Bazaar.</li>              
+                </ul>                   
+			</p>
+			<p>
+               Some text editor, such as Google Doc provide revision history to keep track of changes/version the user made, but the functionality is limited (eg. not able to label changes)               
+            </p>
+            
+            <h3>
+               Git Terminology
+            </h3>
+            <p>
+                Here is few common Git terms that is often used
+                <ul>
+                    <li>                        
+                        <b>Version Control System (VCS)</b>
+                        <div class="div-item">Tool that manages different versions of source code. Also known as source code manager (SCM)</div>                                                
+                    </li>
+
+                    <li>                        
+                        <b>Commit</b>
+                        <div class="div-item">A snapshot reference that saves the project's files and information</div>
+                    </li>
+
+                    <li>                        
+                        <b>Repository / repo</b>
+                        <div class="div-item">directory which contains your project work, as well as a few files (hidden by default on Mac OS X). Repositories can exist either locally on your computer or as a remote copy on another computer. A repository is made up of commits</div>
+                    </li>
+
+                    <li>                        
+                        <b>Working Directory</b>
+                        <div class="div-item">Files that you see in the current local repository.</div>
+                    </li>
+                            
+                    <li>                        
+                        <b>Checkout</b>
+                        <div class="div-item">Content in the repository has been copied to the Working Directory.</div>
+                    </li>
+
+                    <li>                        
+                        <b>Staging Area / Staging Index / Index</b>
+                        <div class="div-item">A file in the Git directory that stores information about what will go into your next commit.  Files on the Staging Index are poised to be added to the repository</div>
+                    </li>
+                    
+                    <li>                        
+                        <b>SHA (Secure Hash Algorithm)</b>
+                        <div class="div-item">A 40-character length  (0–9 and a–f) commit ID string. It is calculated based on the contents of a file or directory structure in Git</div>
+                    </li>
+             
+                    <li>                        
+                        <b>Branch</b>
+                        <div class="div-item">A new line of development that diverges from the main line of development, that allows development continue without altering the main line</div>
+                    </li>
+
+                </ul>
+                In Git repository, all changes made to files are pushed/moved into Staging Area, and once committed save to the repository
+            </p>
+
+            <h3>
+               Git Configuration
+            </h3>
+            <p>
+                Here is the one-time configurations needed before starting using Git
+                <div class="code">
+                    <div class="comment"># sets up Git with your name</div>
+                    git config --global user.name "<Your-Full-Name>"
+
+                    <div class="comment"># sets up Git with your email</div>
+                    git config --global user.email "<your-email-address>"
+
+                    <div class="comment"># makes sure that Git output is colored</div>
+                    git config --global color.ui auto
+
+                    <div class="comment"># displays the original state in a conflict</div>
+                    git config --global merge.conflictstyle diff3
+
+                    git config --list
+                    
+                    <div class="comment"># Choose either one code editor (optional) - atom, sublime text or vscode</div>
+                    
+                    <div class="comment"># For Atom  setup</div>
+                    git config --global core.editor "atom --wait"
+                    
+                    <div class="comment"># For Sublime Text setup</div>
+                    git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
+                    
+                    <div class="comment"># For VSCode setup</div>
+                    git config --global core.editor "code --wait"
+                </div>
+            </p>
+            
+		</section>		 		
+	</div> 
+	
+</body> 
+</html>	

@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 2</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+
+        .code{            
+            padding: 10px;            
+            margin-bottom:20px;
+            margin-top:20px;      
+            margin-right:50px;       
+            line-height: 1.5;  
+            background-color: #d3d3d3 ;          
+        }
+
+        .comment {
+            color:green;
+        }
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 2 - Shell Workshop</div> 
+		<div class="head2">Introduction to CloudDevOps  from the Bertelsmann Tech Scholarship Challenge Course - Cloud Track Nanodegree Program</div> 
+    </header> 
+   	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>What is Shell</h3> 
+            <p>	A shell is the outermost operating system (OS) layer (could be graphical or text based) that allows us to interact with the tools and services offerred by OS.</p>
+                <div>
+                    Example of text based shell (Command-Line Interface or CLI) :
+                </div>
+                <ul>
+                    <li>Bash (Bourne Again Shell) used in most Linux (Bourne Again Shell),</li>
+                    <li>Microsoft DOS (MSDOS) from Windows</li>               
+                    <li>Microsoft Powershell from Windows</li>               
+                </ul>                   
+			</p>
+			<p>
+                <div>
+                    There is few Unix-Styled shell for Windows OS: -
+                </div>
+                <ul>
+                    <li>Git Bash - comes with git installation</li>
+                    <li>Windows Subsystem for Linux (WSL) - a mini like VM Linux OS</li>
+                </ul>                
+            </p>
+            
+            <h3>
+                Basic Bash command and concept
+            </h3>
+            <p>
+                Here is the list of common Bash commands used:
+                <ul>
+                    <li>
+                        <b>echo</b> - to print out the string typed after the command
+                        <div class="code">
+                            echo Hello World!<br/>
+                            Hello World!
+                        </div>                                  
+                    </li>
+               
+                    <li>
+                        <b>variable</b> - hold value assigned, Used $ in frontof variable to get the value set
+                        <div class="code">
+                            x=100  <span class="comment"># Set variable x to 100</span><br/>
+                            echo 'The answer is $x.' <span class="comment"># print out value of variable x<br/>
+                            The answer is 100.
+                        </div> 
+                    </li>
+                    <li>
+                        <b>ls</b> - to list file or subdirectories inside the current directory
+                        <div class="code">
+                                ls 		<span class="comment"># list files/directories in current directory</span><br/>
+                                ls Downloads	<span class="comment"># list files/directories in Downloads directory.</span><br/>
+                                ls .	<span class="comment"># list files/directories in current directory. Character . means current directory</span><br/>
+                                ls ~	<span class="comment"># list files/directories in user's home directory (users's top-level directory)</span><br/>
+                        </div>
+                    </li>
+                    <li>
+                       <b>cd</b> - change directory. Directory name is case sensitive
+                       <div class="code">
+                            cd Downloads    <span class="comment"># change to Downloads directory</span><br/>
+                            cd ..           <span class="comment"># change to parent directory relative to current directory</span><br/>
+                       </div>
+                    </li>
+                    <li>
+                        <b>pwd</b> - print out current working directory/path
+                        <div class="code">
+                                cd ~ <br/>
+                                pwd	<span class="comment"># /Users/karl</span><br/>                
+                        </div>
+                    </li>    
+                    
+                    <li>
+                        <b>Relative path</b> - give the path relative to your current location (the current working directory)<br/>
+                        <b>Absolute path</b> - provide the full path, all the way from the /(root) directory.
+                        <div class="code">
+                            pwd 	<span class="comment"># /Users/karl</span><br/> 
+                            cd Downloads/Photos 	<span class="comment"># change to Photos directory inside Download directory</span><br/> 
+                            pwd 	<span class="comment"># /Users/karl/Downloads/Photos</span><br/> 
+                            cd /Users/karl/Downloads/Photos		<span class="comment"># same as above using absolute path</span><br/>              
+                        </div>
+                    </li>
+
+                    <li>
+                        <b>Option</b> - command argument/parameter to provide extra feature/behavior
+                        <div class="code">
+                            ls -l Document/*.pdf	<span class="comment"># Options -l to display in long format. List all pdf file in Document. Character * means any characters</span><br/>
+                            ls *poem*		<span class="comment"># List all files names that contains "poem" characters</span><br/>
+                        </div>
+                    </li>
+
+                    <li>
+                        <b>mkdir</b> - make directory 
+                        <div class="code">
+                            mkdir Photos	<span class="comment"># make Photos directory inside current/working directory</span>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <b>mv</b> - move files/directories
+                        <div class="code">
+                            mkdir Photos	<span class="comment"># make Photos directory inside current/working directory</span><br/>
+                            mv kitten.jpg Photos/kitten.jpg	<span class="comment"># move kitten.jpg into Photos directory</span><br/>
+                            mv kitten.jpg Photos/			<span class="comment"># same as above</span><br/>
+                            mv *.jpg Photos					<span class="comment"># move all jpg files into Photos directory</span><br/> 
+                        </div>
+                    </li>
+        
+                    <li>
+                        <b>curl</b> - utilities command to download a file from the Web
+                        <div class="code">
+                            curl 'http://www.google.com'	<span class="comment"># display HTML contents from the url</span><br/>
+                            curl -L 'http://www.googel.com'	<span class="comment"># option -L means follow URL redirect, and download the content from the redirected url</span><br/>
+                            curl -L -o some_file.html 'http://www.google.com'	<span class="comment"># option o to save content into some_file.html</span><br/>  
+                        </div>
+                    </li>
+            
+                    <li>
+                        To view content of file, use <b>cat</b> (concatenate) or <b>less</b> commands. Use less to view big files
+                        <div class="code">
+                            cat big_file.txt	<span class="comment"># display all contents in the file</span><br/>
+                            less big_file.txt	<span class="comment"># display 1 page at a time. Use down/spacebar & up keys to scroll page down or up. Use / to search</span><br/>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <b>rm</b> - remove/delete files. Use option i to provide prompt feedback on the delete attempt. Use single quote for filename with space
+                        <div class="code">
+                            mkdir example	<span class="comment"># make example directory</span><br/>
+                            rm example		<span class="comment"># permanently delete example file</span><br/>
+                            rm example		<span class="comment"># permanently delete example file with prompt</span><br/>
+                            rmdir example1 example2 example3	<span class="comment"># remove example1, example2 & example3 file</span><br/>
+                            rmdir 'example 1'  <span class="comment"># remove file with name contains space</span><br/>    
+                        </div>
+                    </li>
+
+                    <li>
+                        <b>rmdir</b> - remove/delete directory 
+                        <div class="code">
+                            rmdir example	<span class="comment"># delete example directory</span><br/>        
+                        </div>
+                    </li>
+                
+                </ul>  
+            </p>
+		</section>		 		
+	</div> 
+	
+</body> 
+</html>	
