@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Lesson 17</title> 
+	<style> 
+		.head1 { 
+			font-size:40px; 
+			color:#009900; 
+			font-weight:bold; 
+		} 
+		.head2 { 
+			font-size:17px; 
+			margin-left:10px; 
+			margin-bottom:15px; 
+		} 
+		body { 
+			margin: 0 auto; 
+			background-position:center; 
+			background-size: contain; 
+		} 
+	
+		.body_sec { 
+			margin-left:20px; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	
+	<!-- Header Section -->
+	<header> 
+		<div class="head1">Lesson 22 - Servers and Security Groups</div> 
+		<div class="head2">Learn Security Group, Ingress/Egress rules, Auto Scaling Concept</div> 
+	</header> 
+	
+	<!-- Body section -->
+	<div class = "body_sec"> 
+		<section id="Content"> 
+			<h3>Security Group</h3> 
+			<p>Security Groups are associated with EC2 instances and provide security at the protocol and port access level. 
+				Each security group, working much the same way as a firewall
+				-contains a set of rules that filter traffic coming into and out of an EC2 instance
+			</p>
+			<p>Security groups are specific to individual resources (EC2 servers, databases) and not to subnets</p>
+			<p>	Ingress rules: 
+			<ul> 
+				  <li>Ingress rules are for inbound traffic</li> 
+				  <li>Ingress rules restrict or allow traffic trying to reach our resources on specific ports</li> 
+				  <li>For ingress rules, we want to limit inbound traffic, for security, to a single port or just a handful of ports required by the application we are running</li>
+			</ul>  
+			<p>	Egress rules: 
+			<ul> 
+				<li>Egress rules are for outbound traffic</li> 
+				<li>Egress rules restrict or allow traffic originating from our server</li>
+				<li>For egress rules, we want to give the resource full access to the internet, so we give egress access to all ports, from 0 all the way to 65535</li> 
+			</ul>  
+			</p>
+			<p>Traffic is blocked by default</p>
+		</section>
+		<section id="Content"> 
+			<h3> Auto Scaling Concepts</h3>
+  			<p>	Monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost</p>
+			<ul> 
+				<li>Scaling Policy
+					<p>A Scaling Policy is the criteria used to decide when to Add or Remove Servers from your Auto Scaling Group</p>
+				</li> 
+				<li>Launch Configuration
+					<p>A launch configuration is an instance configuration template that an Auto Scaling group uses to launch EC2 instances</p>
+				</li>
+				<li>Load Balancer
+					<p>A load balancer allows you to reduce your Auto Scaling down and Scale up easily, and user will not feel any different</p>
+				</li> 
+			</ul>   
+			</p>		
+		</section>
+		<section id="Content"> 
+			<h3>Adding Target Groups and Listeners</h3> 
+			<p>A target group tells a load balancer where to direct traffic to : EC2 instances, fixed IP addresses; or AWS Lambda functions, amongst others<p>
+			<p>A listener is a process that checks for connection requests, using the protocol and port that you configure. 
+				The rules that you define for a listener determine how the load balancer routes requests to the targets in one or more target group</p>
+			<p>Health Checks are the requests your Application Load Balancer periodically sends to its registered targets</p>
+		</section> 		 		
+	</div> 
+	
+</body> 
+</html>					 
